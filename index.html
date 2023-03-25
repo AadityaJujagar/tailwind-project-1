@@ -35,6 +35,12 @@
                 top: -50%;
             }
         }
+
+        .CTA {
+            background-size: 100% 100%;
+            padding-top: 7rem;
+            padding-bottom: 7rem;
+        }
     </style>
 </head>
 
@@ -243,7 +249,7 @@
                             class="stroke-1 stroke-[#818597] h-full w-full absolute z-[9] transition-all duration-200"
                             style="stroke-opacity: 0.15">
                             <path d="m 0 6 
-                                                        a 6 6 0 0 1 6 -6 
+                                                    a 6 6 0 0 1 6 -6 
                                                         h 250.32501220703125 
                                                         a 16 16 0 0 1 11 5 
                                                         l 77 77 
@@ -831,24 +837,69 @@
                         <img class="opacity-50" src="./assets/chevron-right.svg" alt="right chevron">
                     </div>
                 </button>
-                <div class="flex flex-row max-w-[960px] items-center mx-auto my-20">
+                <div class="flex justify-evenly flex-row max-w-[960px] items-center mx-auto my-20 space-x-[10rem]">
                     <img height="320px" width="320px" class="rounded-xl" wid src="./assets/testimonial.jpg"
                         alt="testimonial">
-                    <div>
-                        <img src="./assets/quotes.svg" alt="quotes">
-                        <p>
+                    <div class="flex flex-col space-y-2 max-w-[400px]">
+                        <img class="-mb-2" height="40px" width="35px" src="./assets/quotes.svg" alt="quotes">
+                        <p class="font-mullish text-3xl font-extralight">
                             Readymade Closed Wallet
                             Solution For Quick Refunds
                         </p>
-                        <a href="">Learn More</a>
-                        <h3>Lorem Ipsum</h3>
-                        <p>CEO, XYZ Engineering Company</p>
-                        <img src=" ./assets/fake-company-logo.png" alt="">
+                        <a href="#" class="text-grayText italic underline">Learn More</a>
+                        <h3 class="font-mullish font-extrabold text-2xl">Lorem Ipsum</h3>
+                        <p class="font-mullish font-medium">CEO, XYZ Engineering Company</p>
+                        <img width="80px" height="40px" src=" ./assets/fake-company-logo.png" alt="">
                     </div>
                 </div>
-                <div>
-                    <div></div>
+                <div class="flex justify-center flex-row mx-auto space-x-2">
+                    <div class="h-[10px] bg-gray-300 w-[10px] rounded-full"></div>
+                    <div class="h-[10px] bg-lightBlue300 w-[10px] rounded-full"></div>
+                    <div class="h-[10px] bg-gray-300 w-[10px] rounded-full"></div>
+                    <div class="h-[10px] bg-gray-300 w-[10px] rounded-full"></div>
+                    <div class="h-[10px] bg-gray-300 w-[10px] rounded-full"></div>
+                    <div class="h-[10px] bg-gray-300 w-[10px] rounded-full"></div>
                 </div>
+            </div>
+        </section>
+
+        <section class="bg-[url(./assets/CTABg.svg)] h-full w-full CTA bg-cover relative min-h-[490px] bg-no-repeat">
+            <div
+                class="w-11/12 max-w-[1080px] relative flex mx-auto flex-row items-center justify-between space-x-20 -mt-20">
+                <div class="flex flex-col gap-6 mt-16">
+                    <h2 class="font-mullish font-bold text-2xl text-white">Supercharge your business with Razorpay</h2>
+                    <div class="w-6 h-1 bg-greenLight"></div>
+                    <p class="font-mullish text-white">Sign up now to experience the future of payments and offer <br>
+                        your customers the best checkout experience.</p>
+                    <ul class="flex flex-row flex-wrap max-w-[550px] gap-4 space-y-2 text-white">
+                        <li class="font-mullish text-white gap-2 flex flex-row">
+                            <img class="scale-75" src="./assets/check.svg" alt="check sign">
+                            <span>Quick nboarding</span>
+                        </li>
+                        <li class="font-mullish text-white gap-2 flex flex-row">
+                            <img class="scale-75" src="./assets/check.svg" alt="check sign">
+                            <span>Access to entire product suite</span>
+                        </li>
+                        <li class="font-mullish text-white gap-2 flex flex-row">
+                            <img class="scale-75" src="./assets/check.svg" alt="check sign">
+                            <span>API access</span>
+                        </li>
+                        <br>
+                        <li class="font-mullish text-white gap-2 flex flex-row">
+                            <img class="scale-75" src="./assets/check.svg" alt="check sign">
+                            <span>24x7 support</span>
+                        </li>
+                    </ul>
+                    <button
+                        class="min-w-[32px] w-32 font-mullish text-sm font-bold bg-white text-lightBlue300 border flex rounded-sm items-center hover:text-lightBlue500 transition-all py-3 px-4">
+                        Sign Up
+                        <svg viewBox="0 0 24 24" focusable="false" class="w-[14px] h-[14px] ml-3">
+                            <path fill="currentColor" d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+                <img width="240px" height="282px" src="./assets/ctaImg.svg" alt="CTA image">
             </div>
         </section>
     </div>
