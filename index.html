@@ -50,18 +50,21 @@
 
 <body>
     <div class="overflow-x-hidden relative w-full">
-        <section class="h-[52px] w-full relative bg-white mx-auto my-auto flex flex-row items-center justify-between">
+        <section
+            class="h-[52px] w-full relative bg-white mx-auto my-auto flex flex-wrap flex-row items-center justify-between">
             <div
                 class="w-0 h-0 absolute top-0 bottom-0 left-0 border-b-[52px] border-b-lightBlue border-r-[40px] border-r-transparent z-[12]">
             </div>
-            <div class="hidden lg:block w-2 h-[52px] bg-[#C4DDF9] skew-x-[38deg] absolute left-5 z-[12]"></div>
-            <div class="w-[120px] h-[52px] bg-[#E7F1FD] skew-x-[38deg] absolute z-[10] left-4 lg:left-6"></div>
-            <div class="w-[140px] h-[52px] bg-[#F3F8FE] skew-x-[38deg] absolute z-[12] left-[4rem] lg:left-[9rem]">
+            <div class="w-2 h-[52px] bg-[#C4DDF9] skew-x-[38deg] absolute left-5 z-[12]"></div>
+            <div class="w-[120px] h-[52px] bg-[#E7F1FD] skew-x-[38deg] absolute z-[10] left-4"></div>
+            <div class="w-[140px] h-[52px] bg-[#F3F8FE] skew-x-[38deg] absolute z-[12] left-[4rem]">
             </div>
             <div class="mx-auto items-center gap-5 flex">
-                <p class="font-mullish">RazorpayX Payroll: 3 Clicks, Payroll Fixed! Automate payroll now!</p>
+                <p class="hidden lg:block font-mullish z-20">RazorpayX Payroll: 3 Clicks, Payroll Fixed! Automate
+                    payroll now!</p>
+                <p class="lg:hidden font-mullish z-20">Automate Payroll in just 3 clicks now!</p>
                 <button
-                    class="bg-lightBlue py-[9px] px-4 text-xs text-white rounded-md font-mullish font-bold hover:bg-lightBlue500 transition-all duration-200">
+                    class="bg-lightBlue z-20 py-[9px] px-4 text-xs text-white rounded-md font-mullish font-bold hover:bg-lightBlue500 transition-all duration-200">
                     Know More
                 </button>
             </div>
@@ -73,13 +76,13 @@
                 class="w-0 h-0 absolute top-0 bottom-0 right-0 border-t-[52px] border-t-lightBlue border-l-[40px] border-l-transparent z-[14]">
             </div>
         </section>
-        
-        <nav class="bg-deepBlue">
+
+        <nav class="bg-deepBlue flex flex-wrap">
             <div class="relative w-[1080px] mx-auto flex items-center justify-between">
                 <a href="/" class="cursor-pointer py-7 pr-7">
                     <img src="./assets/logo.svg" width="125px" height="30px" alt="Razorpay">
                 </a>
-                <ul class="flex space-x-6">
+                <ul class="hidden lg:flex space-x-6">
                     <li
                         class="text-white font-mullish py-7 hover:text-lightBlue cursor-pointer transition-all duration-200 relative group">
                         <a href="#">Payments</a>
@@ -130,20 +133,23 @@
                                     rounded-sm text-sm  font-bold">
                         Log in
                     </button>
-                    <button class="py-3 px-4 font-mullish rounded-sm text-sm font-bold
+                    <button class="hidden py-3 px-4 font-mullish rounded-sm text-sm font-bold
                                     bg-white text-lightBlue300 border transition-all duration-200
-                                    hover:text-lightBlue500 flex items-center">Sign Up
+                                    hover:text-lightBlue500 lg:flex items-center">Sign Up
                         <svg viewBox="0 0 24 24" focusable="false" class="w-[14px] h-[14px] ml-3">
                             <path fill="currentColor" d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z">
                             </path>
                         </svg>
                     </button>
+                    <div class="lg:hidden block items-center py-7">
+                        <img src="./assets/hamburger_manu.svg" alt="menu">
+                    </div>
                 </div>
             </div>
         </nav>
 
         <section class="relative bg-deepBlue">
-            <div class="w-10/12 max-w-[1080px] flex flex-row justify-between items-center mx-auto">
+            <div class="w-10/12 max-w-[1080px] flex flex-col lg:flex-row justify-between items-center mx-auto">
                 <div class="space-y-8">
                     <h1 class="font-mullish font-bold text-[40px] leading-[1.2] text-white">Power your finance, grow
                         your
@@ -207,30 +213,27 @@
                                 <span>In-depth Reporting and Insights</span>
                             </li>
                         </ul>
-                        <div class="flex flex-row items-center space-x-4">
-                            <div class="flex flex-row items-center space-x-4">
-                                <button
-                                    class="bg-lightBlue text-white rounded-md font-mullish font-bold hover:bg-lightBlue500 transition-all duration-200 py-[14px] px-[18px] flex items-center">
-                                    Sign Up Now
-                                    <svg viewBox="0 0 24 24" focusable="false" class="w-[14px] h-[14px] ml-3">
+                        <div class="flex md:flex-row lg:flex-row flex-col-reverse items-center space-x-4">
+                            <button
+                                class="bg-lightBlue sm:w-fit w-full text-white rounded-md font-mullish font-bold hover:bg-lightBlue500 transition-all duration-200 py-[14px] px-[18px] flex items-center justify-center">
+                                <span class="sm:mx-auto flex items-center justify-center">Sign Up Now <svg
+                                        viewBox="0 0 24 24" focusable="false" class="w-[14px] h-[14px] ml-3">
                                         <path fill="currentColor"
                                             d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z">
                                         </path>
-                                    </svg>
-                                </button>
-                                <div
-                                    class="flex items-center cursor-pointer hover:opacity- transition-all duration-200">
-                                    <a class="font-mullish font-bold text-lightBlue500" href="#">Know
-                                        More</a>
-                                    <img src="./assets/chevron-right.svg" alt="right arrow blue">
-                                </div>
+                                    </svg></span>
+                            </button>
+                            <div class="flex items-center cursor-pointer hover:opacity- transition-all duration-200">
+                                <a class="font-mullish font-bold text-lightBlue500" href="#">Know
+                                    More</a>
+                                <img src="./assets/chevron-right.svg" alt="right arrow blue">
                             </div>
                         </div>
-                        <img class="max-w-[600px] absolute right-0 bottom-0" src="./assets/payment-suite.png"
-                            alt="payment suite">
+                        <img class="absolute right-0 bottom-0 hidden md:max-w-[400px] md:block lg:block lg:max-w-[600px]"
+                            src="./assets/payment-suite.png" alt="payment suite">
                     </div>
                 </div>
-                <div class="w-full grid grid-cols-3 gap-4 mt-10">
+                <div class="w-full grid md:grid-cols-2 lg:grid-cols-3 gap-4 mt-10">
                     <div
                         class="w-full min-h-[15rem] relative cursor-pointer hover:scale-105 hover:bg-[url(./assets/instant-settlement-bghover.svg)] transition-all duration-200">
                         <img class="bg-lightBlue absolute right-3 top-3 w-12 h-12 rounded-full z-[8] transition-all duration-200"
@@ -455,7 +458,7 @@
 
         <section class="bg-[url(./assets/feature-section-2BG.svg)] bg-no-repeat bg-cover pb-[500px] mt-14 pt-[16rem]">
             <div>
-                <h2 class="text-white font-mullish text-center text-2xl leading-[1.2] font-extrabold">
+                <h2 class="sm:hidden text-white font-mullish text-center text-2xl leading-[1.2] font-extrabold">
                     Explore Razorpay Business Banking</h2>
                 <div class="w-6 h-1 bg-greenLight mx-auto mt-4 mb-20"></div>
                 <div class="relative w-full min-h-[440px] flex flex-col">
@@ -465,7 +468,7 @@
                         alt="flame 2">
                     <div class="relative w-11/12 max-w-[1080px] mx-auto pt-4">
                         <div
-                            class=" w-full bg-[#181c2e] border border-slate-700 min-h-[440px] flex rounded-md relative p-10 py-12">
+                            class=" w-full bg-[#181c2e] lg:border md:border border-slate-700 min-h-[440px] flex rounded-md relative p-10 py-12">
                             <div class="flex flex-col justify-between w-full">
                                 <h3 class="font-mullish text-white text-[28px] leading-10 font-bold max-w-[500px]">
                                     Manage your company's finance with
@@ -491,34 +494,32 @@
                                         <span>View financial insights at a glance</span>
                                     </li>
                                 </ul>
-                                <div class="flex flex-row items-center space-x-4">
-                                    <div class="flex flex-row items-center space-x-4">
-                                        <button
-                                            class="relative bg-lightBlue text-white rounded-md font-mullish font-bold hover:bg-lightBlue500 transition-all duration-200 py-[14px] px-[18px] flex items-center justify-start md:pr-[90px]">
-                                            Sign Up
-                                            <div
-                                                class="skew-x-[20deg] w-12 h-16 bg-greenLight absolute right-6 flex justify-center items-center">
-                                                <svg viewBox="0 0 24 24" focusable="false"
-                                                    class="absolute -skew-x-[20deg] w-[20px] h-[20px]">
-                                                    <path fill="currentColor"
-                                                        d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z">
-                                                    </path>
-                                                </svg>
-                                            </div>
-                                        </button>
-                                        <div class="flex items-center cursor-pointer group">
-                                            <a class="font-mullish font-bold text-lightBlue500 hover:text-lightBlue transition-all duration-200"
-                                                href="#">Know
-                                                More</a>
-                                            <img src="./assets/chevron-right.svg" alt="right arrow blue">
+                                <div class="flex flex-col-reverse md:flex-row lg:flex-row items-center space-x-4">
+                                    <button
+                                        class="relative bg-lightBlue sm:w-full text-white rounded-md font-mullish font-bold hover:bg-lightBlue500 transition-all duration-200 py-[14px] px-[18px] flex-1">
+                                        <span class="text-center sm:justify-center">Sign Up</span>
+                                        <div
+                                            class="skew-x-[20deg] w-12 h-16 bg-greenLight translate-y-[-40px] absolute right-6 flex justify-center items-center">
+                                            <svg viewBox="0 0 24 24" focusable="false"
+                                                class="absolute -skew-x-[20deg] w-[20px] h-[20px]">
+                                                <path fill="currentColor"
+                                                    d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z">
+                                                </path>
+                                            </svg>
                                         </div>
+                                    </button>
+                                    <div class="flex items-center cursor-pointer group">
+                                        <a class="font-mullish font-bold text-lightBlue500 hover:text-lightBlue transition-all duration-200"
+                                            href="#">Know
+                                            More</a>
+                                        <img src="./assets/chevron-right.svg" alt="right arrow blue">
                                     </div>
                                 </div>
-                                <img class="max-w-[600px] absolute right-0 bottom-0" src="./assets/buisness-banking.png"
-                                    alt="business banking">
+                                <img class="max-w-[600px] hidden absolute right-0 bottom-0 md:max-w-[400px] lg:max-w-[600px]"
+                                    src="./assets/buisness-banking.png" alt="business banking">
                             </div>
                         </div>
-                        <div class="grid grid-cols-3 w-full gap-4 my-14">
+                        <div class="grid md:grid-cols-2 lg:grid-cols-3 w-full gap-4 my-14">
                             <div
                                 class="w-full min-h-[15rem] relative cursor-pointer hover:scale-105 hover:bg-[url(./assets/instant-settlement-bghover.svg)] transition-all duration-200">
                                 <img class="bg-lightBlue absolute right-3 top-3 w-12 h-12 rounded-full z-[8] transition-all duration-200"
@@ -641,7 +642,7 @@
                             </div>
                         </div>
                         <div
-                            class="flex w-full flex-row items-center justify-evenly border border-slate-700 mb-24 gap-y-6 relative rounded-md p-8">
+                            class="flex sm:hidden w-full flex-row items-center justify-evenly border border-slate-700 mb-24 gap-y-6 relative rounded-md p-8">
                             <p class="text-white font-mullish text-xl">
                                 Check out the live demo to learn how RazorpayX works.
                                 <span class="font-bold">No sign-up required!</span>
